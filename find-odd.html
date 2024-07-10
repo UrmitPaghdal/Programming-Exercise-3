@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 To n Number Odd</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        let end = prompt('Enter ending point');
+        let arr = [];
+
+        function odd(num, endpoint) {
+            if (num <= endpoint) {
+                if (num % 2 != 0) {
+                    arr.push(num);
+                }
+                let plus_num = num + 1;
+                odd(plus_num, endpoint);
+            }
+        }
+
+        odd(1, end);
+        console.log(arr);
+
+    </script>
+
+</body>
+
+</html>
